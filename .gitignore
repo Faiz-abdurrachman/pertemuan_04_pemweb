@@ -3,3 +3,11 @@ __pycache__/
 *.pyc
 *.zip
 .DS_Store
+
+# Modul mentah & internal asdos
+004 Layout dan Template Engine (Jinja2)/
+screenshots/
+*PANDUAN*.md
+*panduan*.md
+*PRESENTASI*.md
+*presentasi*.md
