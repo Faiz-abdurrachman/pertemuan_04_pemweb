@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+<section class="section">
+    <h3 class="section-title">Tentang Saya</h3>
+    <div class="about-content">
+        <p>Saya adalah <span class="highlight">mahasiswa Informatika</span> yang tertarik dengan pengembangan web. Perjalanan saya dimulai dari rasa penasaran terhadap bagaimana sebuah website bekerja &mdash; dari tombol yang diklik sampai data yang tersimpan di server.</p>
+        <p>Saat ini saya fokus memperdalam <span class="highlight">HTML, CSS, Flask</span>, dan berbagai teknologi pendukung lainnya. Setiap baris kode yang saya tulis adalah langkah untuk menjadi lebih baik.</p>
+    </div>
+</section>
+
+<section class="section">
+    <h3 class="section-title">Kartu Profil</h3>
+    <div class="profile-card">
+        <div class="profile-head">
+            <h4>{{ profil.nama }}</h4>
+            <p>{{ profil.kampus }} &middot; Semester {{ profil.semester }}</p>
+        </div>
+        <ul class="profile-info">
+            <li><span>Umur</span><b>{{ profil.umur }} tahun</b></li>
+            <li><span>Kota</span><b>{{ profil.kota }}</b></li>
+            <li><span>Fokus</span><b>Web Development</b></li>
+            <li><span>Status</span><b>{% if profil.umur >= 18 %}Sudah dewasa{% else %}Masih di bawah umur{% endif %}</b></li>
+        </ul>
+    </div>
+</section>
+
+<section class="section">
+    <h3 class="section-title">Perjalanan</h3>
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="year">2024 &mdash; Sekarang</div>
+            <h4>Universitas</h4>
+            <p>Mulai serius belajar pemrograman web dan ikut berbagai organisasi kampus.</p>
+        </div>
+        <div class="timeline-item">
+            <div class="year">2024</div>
+            <h4>Lulus SMA &amp; Kenalan dengan Coding</h4>
+            <p>Lulus SMA, lalu pertama kali kenal HTML &mdash; kaget lihat &lt;h1&gt; bisa jadi tulisan gede di browser.</p>
+        </div>
+        <div class="timeline-item">
+            <div class="year">2006</div>
+            <h4>Lahir</h4>
+            <p>Mulai petualangan di dunia ini.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="quote">
+        "Kita tidak perlu menjadi hebat untuk memulai, tapi kita harus memulai untuk menjadi hebat."
+        <cite>&mdash; Faiz</cite>
+    </div>
+</section>
+{% endblock %}
